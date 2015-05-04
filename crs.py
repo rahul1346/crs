@@ -36,14 +36,21 @@ class crs():
 
     #print columns 0,1,2,3,5
 
-    listOfColumnIndices = [0,1,2,3,5]
+  #  listOfColumnIndices = [0,1,2,3,5]
+    listOfColumnIndices = [0,5]
 
-    for row_idx in range(1, xl_sheet.nrows):
-        print ('-'*40)
-        print ('Row: %s ' % row_idx) #print row number
-        for col_idx in listOfColumnIndices:
-            cell_obj = xl_sheet.cell(row_idx, col_idx)
-            print ('Column: [%s] cell_obj: [%s]' % (col_idx, cell_obj))
+    col = {}
     
+    for row_idx in range(1, xl_sheet.nrows):
+        #print ('-'*40)
+        #print ('Row: %s ' % row_idx) #print row number
+        cell_obj_key = xl_sheet.cell(row_idx, 0)
+        cell_obj_val = xl_sheet.cell(row_idx, 5)
+        #print ('Column: [%s] cell_obj: [%s]' % (col_idx, cell_obj))
+        col[cell_obj_key] = cell_obj_val
+
+
+
+    print (col)
 
 crs()
