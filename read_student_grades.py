@@ -5,7 +5,7 @@ from read_curriculum import read_curriculum
 from xlrd.sheet import ctype_text
 
 def read_student_grades():
-    fname = join(dirname(dirname(abspath(__file__))), 'crs', 'sampleStudent.xls')
+    fname = join(dirname(dirname(abspath(__file__))), 'crs', 'sampleStudent2.xls')
     #open the workbook
 
     xl_workbook = xlrd.open_workbook(fname)

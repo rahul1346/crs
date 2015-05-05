@@ -16,6 +16,7 @@ class crs(object):
     #print (curriculum)
     #print (student_grades)
 
-    compute_courses(student_grades, curriculum)
+    computed_coursework = compute_courses(student_grades, curriculum)
+    print (computed_coursework)
     
 crs()
