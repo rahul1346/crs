@@ -75,4 +75,5 @@ def read_curriculum():
     list_of_courses.append(cl_sheet.cell(15,7))
 
 
-    print (list_of_courses)
+    # print (list_of_courses)
+    return list_of_courses
