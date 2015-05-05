@@ -40,7 +40,10 @@ def read_student_grades():
         cell_obj_key = xl_sheet.cell(row_idx, 0)
         cell_obj_val = xl_sheet.cell(row_idx, 5)
         #print ('Column: [%s] cell_obj: [%s]' % (col_idx, cell_obj))
-        student_grades[cell_obj_key] = cell_obj_val
+        if (cell_obj_key.value in student_grades):
+            pass
+        else:
+            student_grades[cell_obj_key.value] = cell_obj_val.value
 
 
 
