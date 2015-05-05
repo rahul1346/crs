@@ -53,7 +53,7 @@ def process_curriculum(curriculum):
 
 def fetch_class(curriculum, list_of_passed_courses, list_of_failed_courses):
     
-
+    
     return None
 
 def compute_courses(student_grades, curriculum) :
