@@ -51,10 +51,15 @@ def process_curriculum(curriculum):
     print curriculum_str
     return curriculum_str
 
-def fetch_class(curriculum, list_of_passed_courses, list_of_failed_courses):
-    
-    
+def fetch_class(curriculum_str, list_of_passed_courses, list_of_rec_courses):
+    for key in curriculum_str:
+        if ((key in list_of_passed_courses) | (key in list_of_rec_courses)):
+            pass
+        else:
+            return key
+
     return None
+    
 
 def compute_courses(student_grades, curriculum) :
     #print (student_grades)
@@ -75,7 +80,7 @@ def compute_courses(student_grades, curriculum) :
     num_of_additional_courses_to_propose = 10 - len(list_of_rec_courses) 
 
     for i in range(num_of_additional_courses_to_propose):
-        list_of_rec_courses.append(fetch_class(curriculum, list_of_passed_courses, list_of_failed_courses))
+        list_of_rec_courses.append(fetch_class(curriculum_str, list_of_passed_courses, list_of_rec_courses))
 
     return list_of_rec_courses
 
